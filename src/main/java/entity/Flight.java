@@ -21,4 +21,7 @@ public class Flight {
 
     @OneToOne  (mappedBy = "flight", cascade = CascadeType.ALL, orphanRemoval = true)
     private Destination destination;
+
+    @OneToOne  (mappedBy = "flight", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Aircraft aircraft;
 }
