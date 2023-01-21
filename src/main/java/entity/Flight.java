@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -24,4 +25,10 @@ public class Flight {
 
     @OneToOne  (mappedBy = "flight", cascade = CascadeType.ALL, orphanRemoval = true)
     private Aircraft aircraft;
+
+    @ManyToMany (cascade = CascadeType.ALL)
+    @JoinTable (name = "flight_passenger",
+            joinColumns = @JoinColumn(name = "flight_id"),
+            inverseJoinColumns = @JoinColumn(name = "passenger_id"))
+    private List<Passenger> passengers;
 }
