@@ -1,13 +1,12 @@
 package entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.sql.Time;
 
 @Data
@@ -18,8 +17,14 @@ public class Destination {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @JsonIgnore
     private Long id;
     private String airport;
-    private Time time;
+    private Integer travelTime;
+
+    @ToString.Exclude
+    @OneToOne
+    @JoinColumn (name = "flight_id")
+    private Flight flight;
 
 }

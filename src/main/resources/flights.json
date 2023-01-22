@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "date": "2023-01-09 13:00",
+    "status": "DELAYED",
+    "destination": {
+      "id": 1,
+      "airport": "VNO",
+      "travelTime": 123
+    },
+    "aircraft": {
+      "id": 1,
+      "model": "Boeing 777",
+      "capacity": 500,
+      "maxDistance": 1000,
+      "pilots": [
+        {
+          "type": "pilot",
+          "id": 1,
+          "firstName": "Laura",
+          "lastName": "Morton",
+          "yearsOfExperience": 14,
+          "totalFlights": 500
+        },
+        {
+          "type": "pilot",
+          "id": 2,
+          "firstName": "Linas",
+          "lastName": "James",
+          "yearsOfExperience": 44,
+          "totalFlights": 900
+        }
+      ]
+    },
+    "passengers": [
+      {
+        "type": "passenger",
+        "id": 1,
+        "firstName": "Inga",
+        "lastName": "Thomas",
+        "nationality": "nigerian"
+      },
+      {
+        "type": "passenger",
+        "id": 2,
+        "firstName": "Tim",
+        "lastName": "Burton",
+        "nationality": "american"
+      },
+      {
+        "type": "passenger",
+        "id": 3,
+        "firstName": "Milda",
+        "lastName": "Bosas",
+        "nationality": "lithuanian"
+      },
+      {
+        "type": "passenger",
+        "id": 4,
+        "firstName": "Tomas",
+        "lastName": "Sadas",
+        "nationality": "swedish"
+      }
+    ]
+  }
+]

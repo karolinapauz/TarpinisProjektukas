@@ -1,5 +1,6 @@
 package util;
 
+import entity.*;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
@@ -18,7 +19,7 @@ public class HibernateUtil {
                 Configuration configuration = new Configuration();
                 Properties properties = new Properties();
                 properties.put(Environment.DRIVER, "com.mysql.jdbc.Driver");
-                properties.put(Environment.URL, "jdbc:mysql://localhost:3306/hibernate?serverTimezone=UTC");
+                properties.put(Environment.URL, "jdbc:mysql://localhost:3306/tarpinisProjektas?serverTimezone=UTC");
                 properties.put(Environment.USER, "root");
                 properties.put(Environment.PASS, "");
                 properties.put(Environment.DIALECT, "org.hibernate.dialect.MySQL5Dialect");
@@ -29,9 +30,11 @@ public class HibernateUtil {
                 configuration.setProperties(properties);
 
                 //We need to specify classes we will map to database tables here
-                //configuration.addAnnotatedClass(Customer.class);
-                //configuration.addAnnotatedClass(Product.class);
-                //configuration.addAnnotatedClass(Orderis.class);
+                configuration.addAnnotatedClass(Aircraft.class);
+                configuration.addAnnotatedClass(Flight.class);
+                configuration.addAnnotatedClass(Passenger.class);
+                configuration.addAnnotatedClass(Destination.class);
+                configuration.addAnnotatedClass(Pilot.class);
 
                 ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
                         .applySettings(configuration.getProperties()).build();
