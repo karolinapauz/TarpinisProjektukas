@@ -7,14 +7,19 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.List;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Flight {
+@XmlRootElement(name = "flight")
+@XmlAccessorType(XmlAccessType.FIELD)
+public class Flight implements Persistable{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,14 +29,17 @@ public class Flight {
     private FlightStatus status;
 
     @ToString.Exclude
+    @XmlElement
     @OneToOne (mappedBy = "flight", cascade = CascadeType.ALL, orphanRemoval = true)
     private Destination destination;
 
     @ToString.Exclude
+    @XmlElement
     @OneToOne  (mappedBy = "flight", cascade = CascadeType.ALL, orphanRemoval = true)
     private Aircraft aircraft;
 
     @ToString.Exclude
+    @XmlElement
     @ManyToMany (cascade = CascadeType.ALL)
     @JoinTable (name = "flight_passenger",
             joinColumns = @JoinColumn(name = "flight_id"),

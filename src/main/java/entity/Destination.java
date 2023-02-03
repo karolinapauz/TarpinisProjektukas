@@ -7,13 +7,16 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import javax.persistence.*;
-import java.sql.Time;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlTransient;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Destination {
+@XmlAccessorType(XmlAccessType.FIELD)
+public class Destination implements Persistable{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,6 +27,7 @@ public class Destination {
 
     @ToString.Exclude
     @OneToOne
+    @XmlTransient
     @JoinColumn (name = "flight_id")
     private Flight flight;
 

@@ -42,6 +42,11 @@
         <scope>runtime</scope>
         <version>8.0.27</version>
     </dependency>
+    <dependency>
+        <groupId>com.h2database</groupId>
+        <artifactId>h2</artifactId>
+        <version>1.4.200</version>
+    </dependency>
     <!--Needed for hibernate -->
     <dependency>
         <groupId>org.hibernate</groupId>
@@ -52,6 +57,11 @@
         <groupId>javax.xml.bind</groupId>
         <artifactId>jaxb-api</artifactId>
         <version>2.3.1</version>
+    </dependency>
+    <dependency>
+        <groupId>com.itextpdf</groupId>
+        <artifactId>itextpdf</artifactId>
+        <version>5.5.13.3</version>
     </dependency>
     <dependency>
         <groupId>com.sun.xml.bind</groupId>

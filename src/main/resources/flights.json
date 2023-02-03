@@ -12,7 +12,7 @@
       "id": 1,
       "model": "Boeing 777",
       "capacity": 500,
-      "maxDistance": 1000,
+      "airTime": 1000,
       "pilots": [
         {
           "type": "pilot",
@@ -60,6 +60,184 @@
         "firstName": "Tomas",
         "lastName": "Sadas",
         "nationality": "swedish"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "date": "2023-01-10 11:00",
+    "status": "ON_TIME",
+    "destination": {
+      "id": 2,
+      "airport": "LHR",
+      "travelTime": 156
+    },
+    "aircraft": {
+      "id": 2,
+      "model": "Airbus A320",
+      "capacity": 250,
+      "airTime": 800,
+      "pilots": [
+        {
+          "type": "pilot",
+          "id": 3,
+          "firstName": "John",
+          "lastName": "Smith",
+          "yearsOfExperience": 24,
+          "totalFlights": 800
+        },
+        {
+          "type": "pilot",
+          "id": 4,
+          "firstName": "Jane",
+          "lastName": "Doe",
+          "yearsOfExperience": 20,
+          "totalFlights": 700
+        }
+      ]
+    },
+    "passengers": [
+      {
+        "type": "passenger",
+        "id": 5,
+        "firstName": "Mike",
+        "lastName": "Johnson",
+        "nationality": "american"
+      },
+      {
+        "type": "passenger",
+        "id": 6,
+        "firstName": "Mykolas",
+        "lastName": "Petrauskas",
+        "nationality": "lithuanian"
+      },
+      {
+        "type": "passenger",
+        "id": 7,
+        "firstName": "Peter",
+        "lastName": "Markson",
+        "nationality": "american"
+      },
+      {
+        "type": "passenger",
+        "id": 8,
+        "firstName": "Kate",
+        "lastName": "Windy",
+        "nationality": "belgian"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "date": "2023-02-11 09:30",
+    "status": "ON_TIME",
+    "destination": {
+      "id": 2,
+      "airport": "KUN",
+      "travelTime": 200
+    },
+    "aircraft": {
+      "id": 2,
+      "model": "Airbus A380",
+      "capacity": 700,
+      "airTime": 1500,
+      "pilots": [
+        {
+          "type": "pilot",
+          "id": 3,
+          "firstName": "John",
+          "lastName": "Doe",
+          "yearsOfExperience": 18,
+          "totalFlights": 600
+        },
+        {
+          "type": "pilot",
+          "id": 4,
+          "firstName": "Jane",
+          "lastName": "Smith",
+          "yearsOfExperience": 22,
+          "totalFlights": 800
+        }
+      ]
+    },
+    "passengers": [
+      {
+        "type": "passenger",
+        "id": 9,
+        "firstName": "Michael",
+        "lastName": "Johnson",
+        "nationality": "british"
+      },
+      {
+        "type": "passenger",
+        "id": 10,
+        "firstName": "Emily",
+        "lastName": "Williams",
+        "nationality": "canadian"
+      },
+      {
+        "type": "passenger",
+        "id": 11,
+        "firstName": "David",
+        "lastName": "Brown",
+        "nationality": "australian"
+      },
+      {
+        "type": "passenger",
+        "id": 12,
+        "firstName": "Sarah",
+        "lastName": "Davis",
+        "nationality": "south african"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "date": "2023-03-15 12:45",
+    "status": "CANCELLED",
+    "destination": {
+      "id": 3,
+      "airport": "FRA",
+      "travelTime": 150
+    },
+    "aircraft": {
+      "id": 3,
+      "model": "Boeing 747",
+      "capacity": 550,
+      "airTime": 1300,
+      "pilots": [
+        {
+          "type": "pilot",
+          "id": 5,
+          "firstName": "Robert",
+          "lastName": "Miller",
+          "yearsOfExperience": 20,
+          "totalFlights": 700
+        },
+        {
+          "type": "pilot",
+          "id": 6,
+          "firstName": "William",
+          "lastName": "Wilson",
+          "yearsOfExperience": 25,
+          "totalFlights": 850
+        }
+      ]
+    },
+    "passengers": [
+      {
+        "type": "passenger",
+        "id": 13,
+        "firstName": "Ashley",
+        "lastName": "Moore",
+        "nationality": "new zealand"
+      },
+      {
+        "type": "passenger",
+        "id": 14,
+        "firstName": "Tony",
+        "lastName": "Parker",
+        "nationality": "belgian"
       }
     ]
   }

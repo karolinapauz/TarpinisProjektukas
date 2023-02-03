@@ -7,11 +7,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="TarpinisProjektas" />
+        <module name="TarpinisProjektukas" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="TarpinisProjektas" target="11" />
+      <module name="TarpinisProjektukas" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>
