@@ -30,12 +30,10 @@ public class Aircraft implements Persistable {
 
     @ToString.Exclude
     @OneToMany (mappedBy = "aircraft", cascade = CascadeType.ALL)
-    @XmlElement
     private List<Pilot> pilots;
 
     @ToString.Exclude
     @OneToOne
-    @XmlTransient
     @JoinColumn (name = "flight_id")
     private Flight flight;
 

@@ -27,7 +27,7 @@ public class Pilot extends Person implements Persistable{
     @ToString.Exclude
     @ManyToOne
     @JoinColumn(name = "aircraft_id")
-    @XmlTransient
+   // @XmlTransient
     private Aircraft aircraft;
 
 }

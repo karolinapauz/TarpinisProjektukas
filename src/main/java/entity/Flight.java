@@ -29,17 +29,14 @@ public class Flight implements Persistable{
     private FlightStatus status;
 
     @ToString.Exclude
-    @XmlElement
     @OneToOne (mappedBy = "flight", cascade = CascadeType.ALL, orphanRemoval = true)
     private Destination destination;
 
     @ToString.Exclude
-    @XmlElement
     @OneToOne  (mappedBy = "flight", cascade = CascadeType.ALL, orphanRemoval = true)
     private Aircraft aircraft;
 
     @ToString.Exclude
-    @XmlElement
     @ManyToMany (cascade = CascadeType.ALL)
     @JoinTable (name = "flight_passenger",
             joinColumns = @JoinColumn(name = "flight_id"),

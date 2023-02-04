@@ -27,7 +27,7 @@ public class Destination implements Persistable{
 
     @ToString.Exclude
     @OneToOne
-    @XmlTransient
+   // @XmlTransient
     @JoinColumn (name = "flight_id")
     private Flight flight;
 
