@@ -23,11 +23,8 @@ public class FlightDto {
     private Long id;
     private String date;
     private FlightStatus status;
-
     private Destination destination;
-
     private Aircraft aircraft;
-
     private List<Passenger> passengers;
 
 

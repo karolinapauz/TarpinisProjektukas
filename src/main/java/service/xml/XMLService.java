@@ -1,13 +1,12 @@
 package service.xml;
 
 import entity.Flight;
+import entity.Pilot;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -43,12 +42,8 @@ public class XMLService {
             FlightDto flightDto = new FlightDto();
             flightDto.setId(flight.getId());
             flightDto.setDate(flight.getDate());
-
-           // flightDto.setAircraft(flight.getAircraft());
-            flightDto.setStatus(flight.getStatus());
             flightDtos.add(flightDto);
         }
-
         flights1.setFlights(flightDtos);
 
         JAXBContext jaxbContext = JAXBContext.newInstance(Flights.class);

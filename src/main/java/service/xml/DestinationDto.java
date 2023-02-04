@@ -1,6 +1,6 @@
 package service.xml;
 
-import entity.Aircraft;
+import entity.Flight;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -13,10 +13,10 @@ import javax.xml.bind.annotation.XmlTransient;
 @NoArgsConstructor
 @Data
 @XmlAccessorType(XmlAccessType.FIELD)
-public class PilotDto {
-
-    private Integer yearsOfExperience;
-    private Integer totalFlights;
+public class DestinationDto {
+    private Long id;
+    private String airport;
+    private Integer travelTime;
     @XmlTransient
-    private Aircraft aircraft;
+    private Flight flight;
 }

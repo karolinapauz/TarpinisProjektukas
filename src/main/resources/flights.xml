@@ -3,21 +3,17 @@
     <flight>
         <id>1</id>
         <date>2023-01-09 13:00</date>
-        <status>DELAYED</status>
     </flight>
     <flight>
         <id>2</id>
         <date>2023-01-10 11:00</date>
-        <status>ON_TIME</status>
     </flight>
     <flight>
         <id>3</id>
         <date>2023-02-11 09:30</date>
-        <status>ON_TIME</status>
     </flight>
     <flight>
         <id>4</id>
         <date>2023-03-15 12:45</date>
-        <status>CANCELLED</status>
     </flight>
 </flights>
