@@ -42,6 +42,7 @@ public class XMLService {
             FlightDto flightDto = new FlightDto();
             flightDto.setId(flight.getId());
             flightDto.setDate(flight.getDate());
+
             flightDtos.add(flightDto);
         }
         flights1.setFlights(flightDtos);

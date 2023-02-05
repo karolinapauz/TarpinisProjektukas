@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlTransient;
 
 @AllArgsConstructor
@@ -18,5 +19,6 @@ public class DestinationDto {
     private String airport;
     private Integer travelTime;
     @XmlTransient
+    @XmlElement
     private Flight flight;
 }

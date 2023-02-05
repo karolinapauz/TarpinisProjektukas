@@ -12,25 +12,8 @@ import java.util.stream.Collectors;
 
 public class SearchService {
 
-    static FlightRepo flightRepo = new FlightRepo();
-    public static List<Flight> flightList = flightRepo.findAll();
-
-    public SearchService() {
-        Pilot mostExperienced = findMostExperienced(flightList);
-        System.out.println(mostExperienced.getFirstName());
-        System.out.println(calculateTotalFlights(flightList));
-
-        List<Passenger> passengerByName = getPassengerByName(flightList, "Tim");
-        passengerByName.forEach(System.out::println);
-
-        List<Passenger> passengerByNationality = getPassengerByNationality(flightList, "lithuanian");
-        passengerByNationality.forEach(System.out::println);
-
-        List<Flight> flightsByStatus = getFlightsByStatus(flightList, FlightStatus.ON_TIME);
-        flightsByStatus.forEach(System.out::println);
-
-        System.out.println(getFlightByPassenger(flightList, "Tim"));
-    }
+    private static final FlightRepo flightRepo = new FlightRepo();
+    private static final List<Flight> flightList = flightRepo.findAll();
 
     public Pilot findMostExperienced(List<Flight> flights) {
         return flights.stream()

@@ -19,6 +19,24 @@ public class Main {
 
         List<Flight> flightList = flightRepo.findAll();
 
+        SearchService searchService = new SearchService();
+
+        Pilot mostExperienced = searchService.findMostExperienced(flightList);
+        System.out.println(mostExperienced.getFirstName());
+        System.out.println(searchService.calculateTotalFlights(flightList));
+
+        List<Passenger> passengerByName = searchService.getPassengerByName(flightList, "Tim");
+        passengerByName.forEach(System.out::println);
+
+        List<Passenger> passengerByNationality = searchService.getPassengerByNationality(flightList, "lithuanian");
+        passengerByNationality.forEach(System.out::println);
+
+        List<Flight> flightsByStatus = searchService.getFlightsByStatus(flightList, FlightStatus.ON_TIME);
+        flightsByStatus.forEach(System.out::println);
+
+        System.out.println(searchService.getFlightByPassenger(flightList, "Tim"));
+
+
         Pilot pilot = flightList.get(0).getAircraft().getPilots().get(0);
         pilot.setFirstName("Jonas");
         flightRepo.update(pilot);

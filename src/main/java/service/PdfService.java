@@ -82,7 +82,6 @@ public class PdfService {
 
     }
 
-
     public Image getBarcode(Flight flight, Passenger passenger, Document document) throws FileNotFoundException, DocumentException {
         Barcode128 barcode128 = new Barcode128();
         barcode128.setCode(flight.getDate() + passenger.getFirstName() + passenger.getLastName() + passenger.getId());
